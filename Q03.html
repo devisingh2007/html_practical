@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Box</title>
+
+    <style>
+        .box {
+            width: 300px;        
+            padding: 20px;       
+            margin: 20px auto;   
+            border: 3px solid black;
+            background-color: lightblue;
+        }
+
+       
+        @media (max-width: 500px) {
+            .box {
+                display: none;
+            }
+        }
+
+       
+        @media (min-width: 500px) {
+            .box {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Responsive Box Example</h2>
+
+    <div class="box">
+        This is a sample box with padding, margin, border, and fixed width.
+    </div>
+
+</body>
+</html>
