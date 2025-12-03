@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter Without Onclick</title>
+</head>
+<body>
+
+    <h3>Simple Counter</h3>
+
+    <button id="minusBtn">−</button>
+    <span id="display">0</span>
+    <button id="plusBtn">+</button>
+
+    <script>
+       
+        let count = localStorage.getItem("count");
+        count = count ? Number(count) : 0;
+
+       const display = document.getElementById("display");
+        display.innerText = count;
+
+       
+        const plusBtn = document.getElementById("plusBtn");
+        const minusBtn = document.getElementById("minusBtn");
+
+      
+        plusBtn.addEventListener("click", function() {
+            count++;
+            display.innerText = count;
+            localStorage.setItem("count", count);
+        });
+
+       
+        minusBtn.addEventListener("click", function() {
+            count--;
+            display.innerText = count;
+            localStorage.setItem("count", count);
+        });
+    </script>
+
+</body>
+</html>
